@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>listing inner</title>
+        <link rel="stylesheet" href="../style.css" />
+        <script src="listingInner.js"></script>
+      </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="../index.html"
+          ><img src="../assets/images/LOGO-02 3.svg" alt="logo" class="logo"
+        /></a>
+      </div>
+    </header>
+    <hr />
+  
+    <main>
+        <div class="listingDetails">
+          <div class="listingImage">
+            <img src="./assets/images/listing-example.jpg" alt="listing" />
+          </div>
+          <div class="listingInfo">
+            <h2>მისამართი: ბაგრატიონი ქ. 10</h2>
+            <p>ქალაქი: ბათუმი</p>
+            <p>საფოსტო ინდექსი: 6000</p>
+            <p>ფასი: 150,000 ₾</p>
+            <p>ფართობი: 120 კვ.მ.</p>
+            <p>საძინებლების რაოდენობა: 3</p>
+            <p>სტატუსი: იყიდება</p>
+            <p>აღწერა: დიდი ბინა ქალაქის ცენტრში.</p>
+            <p>გამოქვეყნების თარიღი: 2024-09-21</p>
+          </div>
+          <div class="agentInfo">
+            <img src="./assets/images/agent-avatar.jpg" alt="Agent" class="agentAvatar" />
+            <p>სახელი და გვარი: ნინო დავითაძე</p>
+            <p>ელ-ფოსტა: nino@redberry.ge</p>
+            <p>ტელეფონი: 599123456</p>
+          </div>
+        </div>
+  
+        <!-- Delete button with modal -->
+        <button class="deleteButton">წაშლა</button>
+  
+        <!-- Modal -->
+        <div id="deleteModal" class="modal">
+          <div class="modalContent">
+            <p>ნამდვილად გსურთ წაშლა?</p>
+            <button id="confirmDelete">დადასტურება</button>
+            <button id="cancelDelete">გაუქმება</button>
+          </div>
+        </div>
+  
+        <!-- Slider for similar listings -->
+        <div class="slider">
+          <h3>სხვა ლისტინგები</h3>
+          <div class="sliderContent">
+            <div class="sliderItem">Listing 1</div>
+            <div class="sliderItem">Listing 2</div>
+            <div class="sliderItem">Listing 3</div>
+          </div>
+        </div>
+      </main>
+     
+    
+  </body>
+</html>

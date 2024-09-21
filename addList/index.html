@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Listing</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="list.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="../index.html"
+          ><img src="../assets/images/LOGO-02 3.svg" alt="logo" class="logo"
+        /></a>
+      </div>
+    </header>
+    <hr />
+    <main style="display: flex; flex-direction: column; align-items: center">
+      <h1>ლისტინგის დამატება</h1>
+      <form id="listingForm" enctype="multipart/form-data">
+        <h2>გარიგების ტიპი</h2>
+        <div class="dealType">
+          <div class="forSale">
+            <input type="radio" id="sale" name="status" value="sale" required />
+            <label for="sale">იყიდება</label>
+          </div>
+
+          <div class="forRent">
+            <input type="radio" id="rent" name="status" value="rent" required />
+            <label for="rent">ქირავდება</label><br />
+          </div>
+        </div>
+        <h2>მდებარობა</h2>
+        <div class="location">
+          <div class="gridItem">
+            <label for="address">მისამართი,*</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              minlength="2"
+              required
+            />
+            <small class="requirement"
+              ><img src="/assets/images/Vector (21).svg" alt="done" />მინიმუმ
+              ორი სიმბოლო</small
+            >
+          </div>
+          <div class="gridItem">
+            <label for="zip">საფოსტო ინდექსი (ZIP Code):</label>
+            <input type="text" id="zip" name="zip" pattern="[0-9]+" required />
+            <small class="requirement"
+              ><img src="/assets/images/Vector (21).svg" alt="done" />მხოლოდ
+              რიცხვები</small
+            >
+          </div>
+
+          <div class="gridItem">
+            <label for="region">რეგიონი:</label>
+            <select id="region" name="region" required></select>
+          </div>
+          <div class="gridItem">
+            <label for="city">ქალაქი:</label>
+            <select id="city" name="city" required disabled></select>
+          </div>
+        </div>
+
+        <h2>ბინის დეტალები</h2>
+        <div class="flatDetails">
+          <div class="flat">
+            <div class="price">
+              <label for="price">ფასი:</label>
+              <input
+                type="text"
+                id="price"
+                name="price"
+                pattern="[0-9]+"
+                required
+              /><br />
+              <small class="requirement"
+                ><img src="/assets/images/Vector (21).svg" alt="done" />მხოლოდ
+                რიცხვები</small
+              >
+            </div>
+
+            <div class="size">
+              <label for="area">ფართობი:</label>
+              <input
+                type="text"
+                id="area"
+                name="area"
+                pattern="[0-9]+"
+                required
+              /><br />
+              <small class="requirement"
+                ><img src="/assets/images/Vector (21).svg" alt="done" />მხოლოდ
+                რიცხვები</small
+              >
+            </div>
+          </div>
+          <label for="bedrooms">საძინებლების რაოდენობა *</label>
+          <input
+            type="number"
+            id="bedrooms"
+            name="bedrooms"
+            min="1"
+            required
+          /><br />
+          <small class="requirement"
+            ><img src="/assets/images/Vector (21).svg" alt="done" />მხოლოდ
+            რიცხვები</small
+          >
+          <label for="description">აღწერა *</label>
+          <textarea
+            id="description"
+            name="description"
+            minlength="5"
+            required
+          ></textarea
+          ><br />
+          <small class="requirement"
+            ><img src="/assets/images/Vector (21).svg" alt="done" />მინიმუმ ხუთი
+            სიტყვა</small
+          >
+          <label for="image">ატვირთეთ ფოტო *</label>
+          <input type="file" id="imageInput" name="image" required /><br />
+        </div>
+        <label for="agent">აგენტი:</label>
+
+        <select id="agent" name="agent" required></select
+        ><br />
+
+        <div class="buttonContainer">
+          <button id="closeModal" class="closeButton">გაუქმება</button>
+          <button type="submit" id="submitListing">დაამატე ლისტინგი</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="./assets/images/LOGO-02 3.svg" alt="logo" class="logo" />
+      </div>
+    </header>
+    <hr />
+    <main>
+      <div class="filterDiv">
+        <div class="filterList">
+          <a href="" class="filterItem" data-filter="region"
+            >რეგიონი<img
+              src="./assets/images/Shape (4).svg"
+              alt=""
+              class="filterIcon"
+          /></a>
+          <a href="" class="filterItem" data-filter="price"
+            >საფასო კატეგორია<img
+              src="./assets/images/Shape (4).svg"
+              alt=""
+              class="filterIcon"
+          /></a>
+          <a href="" class="filterItem" data-filter="area"
+            >ფართობი<img
+              src="./assets/images/Shape (4).svg"
+              alt=""
+              class="filterIcon"
+          /></a>
+          <a href="" class="filterItem" data-filter="bedrooms"
+            >საძინებლების რაოდენობა<img
+              src="./assets/images/Shape (4).svg"
+              alt=""
+              class="filterIcon"
+          /></a>
+
+          <div id="filterDropdown" class="dropdown">
+            <div class="dropdownHeader"></div>
+            <div class="dropdownContent"></div>
+            <div class="chooseContent">
+              <button class="chooseButton">არჩევა</button>
+            </div>
+          </div>
+        </div>
+        <div class="addButtons">
+          <a href="./addList/index.html" class="addList"
+            >+ ლისტინგის დამატება</a
+          >
+          <button class="addAgent">+ აგენტის დამატება</button>
+        </div>
+      </div>
+
+      <div class="filterResult">
+        <div class="result">Selected:</div>
+
+        <button class="clearUp">გასუფთავება</button>
+      </div>
+      <div class="listContainter" id="realEstateContainer"></div>
+      <div id="agents"></div>
+
+      <!-- Agent Modal -->
+      <div id="agentModal" class="modal">
+        <div class="modalContent">
+          <h2>აგენტის დამატება</h2>
+          <form id="agentForm">
+            <!-- Grid Layout -->
+            <div class="formGrid">
+              <!-- First Column -->
+              <div class="column">
+                <label for="agentFirstName">სახელი *</label>
+                <input
+                  type="text"
+                  id="agentName"
+                  name="agentFirstName"
+                  required
+                  minlength="2"
+                />
+                <small class="requirement"
+                  ><img
+                    src="/assets/images/Vector (21).svg"
+                    alt="done"
+                  />მინიმუმ ორი სიმბოლო</small
+                >
+
+                <label for="agentEmail">ელ-ფოსტა *</label>
+                <input
+                  type="email"
+                  id="agentEmail"
+                  name="agentEmail"
+                  required
+                  pattern=".+@redberry.ge"
+                />
+                <small class="requirement"
+                  ><img src="/assets/images/Vector (21).svg" alt="done" />უნდა
+                  მთავრდებოდეს @redberry.ge-თ</small
+                >
+              </div>
+
+              <!-- Second Column -->
+              <div class="column">
+                <label for="agentLastName">გვარი</label>
+                <input
+                  type="text"
+                  id="agentSurname"
+                  name="agentLastName"
+                  required
+                  minlength="2"
+                />
+                <small class="requirement"
+                  ><img
+                    src="/assets/images/Vector (21).svg"
+                    alt="done"
+                  />მინიმუმ ორი სიმბოლო</small
+                >
+
+                <label for="agentPhone">ტელ-ნომერი</label>
+                <input
+                  type="tel"
+                  id="agentPhone"
+                  name="agentPhone"
+                  required
+                  pattern="5[0-9]{8}"
+                  placeholder="5XXXXXXXX"
+                />
+                <small class="requirement"
+                  ><img src="/assets/images/Vector (21).svg" alt="done" />უნდა
+                  იყოს ფორმატის 5XXXXXXXX</small
+                >
+              </div>
+            </div>
+
+            <!-- Third Row - Avatar Upload -->
+            <div class="photoUpload">
+              <label for="agentAvatar">ატვირთეთ ფოტო *</label>
+              <input
+                type="file"
+                id="agentAvatar"
+                name="agentAvatar"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <div class="buttonContainer">
+              <button id="closeModal" class="closeButton">გაუქმება</button>
+              <button type="submit" id="submitAgent">დამატება</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
